@@ -1,0 +1,38 @@
+
+/* header */
+.header {
+    width: 18vw;
+    height: 100vh;
+    display: flex;
+    position: left;
+    border-right: 2px solid black;
+    flex-direction: column;
+}
+.logo {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2vw;
+}
+.logo a {
+    text-decoration: none;
+    color:black;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+}
+.logo img {
+    width: 3rem;
+}
+.itemmenu {
+    width:14vw;
+    height: 5vh;
+    background-color: tomato;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2vw;
+}
