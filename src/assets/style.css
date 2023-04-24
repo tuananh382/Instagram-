@@ -1,20 +1,40 @@
 
 /* header */
+::-webkit-scrollbar {
+    display: none;
+}
 .header {
-    width: 18vw;
+    background-color: white;
+    width: 16vw;
     height: 100vh;
     display: flex;
     position: left;
-    border-right: 2px solid black;
+    border-right: 1px solid black;
     flex-direction: column;
+    position: sticky;
+    top:0px;
+}
+
+.header1 {
+    background-color: white;
+    width: 4vw;
+    height: 100vh;
+    display: flex;
+    border-right: 1px solid black;
+    flex-direction: column;
+    flex-direction: column;
+    position: sticky;
+    top:0px
 }
 .logo {
     width: 100%;
-    height: 8vh;
+    height: 6vh;
     display: flex;
     justify-content: left;
     align-items: center;
     padding-left: 2vw;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
 }
 .logo a {
     text-decoration: none;
@@ -23,16 +43,577 @@
     font-style: italic;
     font-weight: 600;
 }
-.logo img {
+.logo2 {
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+}
+.logo2 img {
     width: 3rem;
+    
+}
+.menu {
+    width:14vw;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 0 auto;
+}
+.menu1 {
+    background-color: white;
+    z-index: 1;
+    width:4vw;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .itemmenu {
-    width:14vw;
-    height: 5vh;
-    background-color: tomato;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 1vh ;
+    margin: 1px;
+    text-decoration: none;
+    color: black;
+    border-radius: 1.2rem;
+}
+.itemmenu:hover {
+    background-color: rgb(202, 201, 201);
+}
+.itemmenu i {
+    font-size: 2rem;
+    padding: 3px;
+    font-weight: 500;
+}
+#active {
+    background-color: rgb(202, 201, 201);
+}
+
+.more {
+    display: flex;
+    margin-top: auto;
+}
+
+@-webkit-keyframes slidein {
+    100% { -webkit-transform: translateX(0%); }
+}
+@keyframes slidein {
+    100% { transform: translateX(4.1vw); }
+}
+.boxmore {
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    width: 25vw;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    -webkit-transform: translateX(-100%);
+    animation: 1s ease slidein;
+    -webkit-animation: slidein 0.5s forwards;
+    border-right: 1px solid black;
+}
+.xboxmore {
+    width: 4vh;
+    height: 4vh;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    top:5px;
+    right: 5px;
+    border-radius: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.xboxmore i{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.xboxmore:hover {
+    background-color: black;
+    color: white;
+}
+.boxmore p {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 2vw;
+    margin: 0;
+    margin-top: 5vh;
+}
+.boxsearch input{
+    width: 20vw;
+    height: 4vh;
+    border-radius: 10px;
+    border: 0px;
+    padding-left: 2vw;
+    background-color: rgb(218, 218, 218);
+    font-size: 1rem;
+    margin-top: 2vh;
+}
+.result {
+    border-top: 1px solid black ;
+    margin-top: 3vh;
+}
+
+
+.mypage {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 95vh;
+    margin: auto;
+    padding-top: 5vh;
+}
+.infor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.avatar img{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+}
+.inforitem {
+    display: flex;
+    flex-direction: column;
+}
+.name {
+    display: flex;
+    flex-direction: row;
+}
+.name p {
+    padding-right: 2vw;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+.change {
+    font-size: 1.2rem;
+    margin: auto;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+}
+.change:hover {
+    background-color: black;
+    color: white;
+}
+.post_fler_fl {
+    display: flex;
+    flex-direction: row;
+}
+.post_fler_fl p {
+    font-size: 1.2rem;
+    padding-right: 2vw;
+}
+.main {
+    border-top: 1px solid black ;
+    margin-top: 5vh;
+}
+.main p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loginform {
+    width: 20vw;
+    height: 40vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resgisterform {
+    width: 20vw;
+    height: 60vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resgisterform p {
+    font-size: 2rem;
+}
+.resgisterform a {
+    margin-bottom:2vh;
+    text-decoration: none;
+    color: black;
+}
+.loginform p {
+    font-size: 2rem;
+}
+
+.username {
+    width: 12vw;
+    height: 4vh;
+    border-radius: 2px;
+}
+
+.password {
+    margin-top: 2vh;
+    width: 12vw;
+    height: 4vh;
+    border-radius: 2px;
+}
+
+.yourname {
+    margin-top: 2vh;
+    width: 12vw;
+    height: 4vh;
+    border-radius: 2px;
+}
+.passwordagain {
+    margin-top: 2vh;
+    width: 12vw;
+    height: 4vh;
+    border-radius: 2px;
+}
+.loginbutton {
+    width: 5vw;
+    height: 4vh;
+    margin-top: 2vh;
+    background-color: rgb(138, 207, 253);
+    border-radius: 5px;
+}
+
+.loginbutton:hover {
+    background-color: rgb(89, 189, 255);
+}
+
+.line {
+    width: 13vw;
+    height: 1px;
+    background-color: black;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.loginform a {
+    margin-bottom:2vh;
+    text-decoration: none;
+    color: black;
+}
+.resgister {
+    width: 20vw;
+    height: 7vh;
+    border: 1px solid black;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resgister a {
+    text-decoration: none;
+    color:  rgb(41, 169, 255);
+;
+}
+.resgisterbutton {
+    width: 5vw;
+    height: 4vh;
+    margin-top: 2vh;
+    background-color: rgb(138, 207, 253);
+    border-radius: 5px;
+}
+.resgisterbutton:hover {
+    background-color: rgb(89, 189, 255);
+}
+
+.posts {
+    position: sticky;
+    left: 37vw;
+    margin-bottom: 10vh;
+}
+.post {
+    width: 25vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color:  rgb(226, 223, 223); */
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin-top: 10vh;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.inforposter {
+    width: 25vw;
+    height: 4vh;;
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    padding-left: 2vw;
+    padding: 10px;
+}
+
+.avatarposter {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.inforposter p {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+.circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: black;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.mainpost img{
+    width: 25vw;
+    height: 50vh;
+    object-fit: cover;
+}
+.connectpost {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.connectpost i{
+    font-weight: 600;
+    padding: 5px;
+}
+
+.connectpost p {
+    margin: 0;
+}
+
+.cmtpost {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    /* background-color:  rgb(192, 192, 192); */
+    max-width: 25vw;
+    margin: 10px;
+    padding: 5px;
+}
+
+.cmtpost p{
+    margin: 0;
+}
+.cmtpost h4 {
+    margin: 0;
+}
+.cmtdetail {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+
+.frontpage {
+    display: flex;
+    flex-direction: row;
+}
+
+.caption{
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.myinfor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    width: 20vw;
+    position: sticky;
+    left: 72vw;
+    top: 10vh;
+}
+.myinfor p {
+    font-size: 1.1rem;
+    text-align: left;
+}
+.myinfor_infor img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2.5rem;
+    object-fit: cover;
+}
+.myinfor a{
+    text-decoration: none;
+    color: rgb(56, 164, 252);
+    margin: 0px;
+    margin-left: auto;
+}
+.myinfor a:hover {
+    color:  red;
+}
+.myinfor_infor {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.myinfor_infor p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 10px;
+
+}
+.myinfor_fr img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+.myinfor_fr {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 5px;
+}
+.myinfor_fr p {
+    padding-left: 5px;
+}
+
+.container_mess {
+    width: 45vw;
+    height: 90vh;
+    border: 1px solid black;
+    margin: auto;
+    position: sticky;
+    left: 37vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.message {
+    display: flex;
+    flex-direction: row;
+}
+.listmess {
+    border-right: 1px solid black;
+    width: 15vw;
+}
+.listmess p {
+    height: 5vh;
+    border-bottom: 1px solid black;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.layoutcreatepost {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(194, 194, 194);
+    z-index: 2;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+}
+
+.maincreate{
+    width: 40vw;
+    height: 90vh;
+    background-color: white;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    margin-left: 30vw;
+    margin-top: 5vh;
+    border-radius: 20px;
+}
+
+.statuspost {
+    display: flex;
+    flex-direction: row;
+    padding: 3vh;
+    align-items: end;
+}
+
+.statuspost input {
+    width: 25vw;
+    margin-left: 3vh;
+    height: 7vh;
+    font-size: 1.2rem;
+    border: 0px;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+.statuspost img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+.addimgpost {
+    width: 40vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addimgpost button{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 5vw;
+    background-color: transparent;
+}
+.addimgpost button i {
+    font-size: 2rem;
+}
+.addimgpost button:hover {
+    background-color: black;
+    color: white;
+}
+.xcreatepost {
+    width: 6vh;
+    height: 6vh;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    top:5px;
+    right: 5px;
+    border-radius: 3vh;
+}
+.xcreatepost:hover {
+    background-color: black;
+    color:white
+}
+.xcreatepost i {
+    font-size: 2rem;
+    font-weight: 700;
 }
