@@ -4,7 +4,7 @@ import { environment } from '../environments/environment';
 const API_URL = environment.backEnd;
 
 export default class AuthenticationService {
-  static async login(username: string, password: string) {
+  static async login(username, password) {
     const response = await axios.post(`${API_URL}/login`, {
       username,
       password
