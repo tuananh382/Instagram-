@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { environment } from '../environments/environment';
 
-const API_URL = environment.backEnd;
+const API_URL = environment.backEnd
 
 export default class AuthenticationService {
   static async login(username, password) {
@@ -15,7 +15,7 @@ export default class AuthenticationService {
     }
     return response.data;
   }
-
+spét
   static logout() {
     localStorage.removeItem('user');
   }
