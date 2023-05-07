@@ -10,7 +10,7 @@ export default class ApiService {
      * @returns 
      */
     static async createUser(user) {
-      const response = await axios.post(`${API_URL}/login/register`, {
+      const response = await axios.post(`${API_URL}/auth/register`, {
         username: user.username,
         password: user.password,
         fullName: user.fullName,
