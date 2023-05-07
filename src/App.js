@@ -1,26 +1,43 @@
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Frontpage from "./components/frontpage";
+import Login from "./components/login";
+import { AuthProvider } from "./providers/context-provider";
 
-import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Frontpage from './components/frontpage';
-import Message from './components/message';
-import Mypage from './components/mypage';
-import Login from './components/login';
-import Resgister from './components/resgister';
-import Post from './components/post';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
-          <Route path="/register" element={<Resgister/>}></Route>
-          <Route path="frontpage" element={<Frontpage />}></Route>
-          <Route path="message" element={<Message />}></Route>
-          <Route path="mypage" element={<Mypage />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/login' element={<Login />} />
+            <Route path="/" element={<Frontpage />} />
+            {/* <Route path="message" element={<Message />} /> */}
+            {/* <Route path="mypage" element={<Mypage />} /> */}
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
+
+// function ProtectedRoute({ component: Component, ...rest }) {
+//   const { isLoggedIn } = useContext(AuthContext);
+
+//   return (
+//     <Routes>
+//       <Route
+//         {...rest}
+//         render={(props) =>
+//           isLoggedIn ? (
+//             <Component {...props} />
+//           ) : (
+//             <Navigate to="/login" replace />
+//           )
+//         }
+//       />
+//     </Routes>
+//   );
+// }
 
 export default App;
