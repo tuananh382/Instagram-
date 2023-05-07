@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import logo from "../assets/img/logo2.png"
-import "../assets/style.css"
-import img from "../assets/img/img1.jpg"
+import React, { useState } from "react";
+import img from "../assets/img/img1.jpg";
+import logo from "../assets/img/logo2.png";
+import "../assets/style.css";
 
 function Header(props) {
     const [header, setHeader] = useState("first")
@@ -39,13 +39,13 @@ function Header(props) {
                     </div>
                     <div className="menu">
                         <a className="itemmenu" id={active === "frontpage" ? "active" : ""} href="/"><i class="material-symbols-outlined">home</i>Trang Chủ</a>
-                        <a className="itemmenu" id={active == "search" ? "active" : ""} onClick={clicksearch} ><i class="material-symbols-outlined">search</i>Tìm kiếm</a>
-                        <a className="itemmenu" id={active == "explore" ? "active" : ""} href=""><i class="material-symbols-outlined">explore</i>Khám phá</a>
-                        <a className="itemmenu" id={active == "reals" ? "active" : ""} href=""><i class="material-symbols-outlined">auto_read_play</i>Reels</a>
+                        <a className="itemmenu" id={active === "search" ? "active" : ""} onClick={clicksearch} ><i class="material-symbols-outlined">search</i>Tìm kiếm</a>
+                        <a className="itemmenu" id={active === "explore" ? "active" : ""} href=""><i class="material-symbols-outlined">explore</i>Khám phá</a>
+                        <a className="itemmenu" id={active === "reals" ? "active" : ""} href=""><i class="material-symbols-outlined">auto_read_play</i>Reels</a>
                         <a className="itemmenu" id={active === "message" ? "active" : ""} href="message"><i class="material-symbols-outlined">chat</i>Tin nhắn</a>
-                        <a className="itemmenu" id={active == "notice" ? "active" : ""} onClick={clicknotice}><i class="material-symbols-outlined">favorite</i>Thông báo</a>
-                        <a className="itemmenu" id={active == "createpost" ? "active" : ""} onClick={clickncreatepost}><i class="material-symbols-outlined">add_circle</i>Tạo</a>
-                        <a className="itemmenu" id={active == "mypage" ? "active" : ""} href="mypage"><i class="material-symbols-outlined">home</i>Trang cá nhân</a>
+                        <a className="itemmenu" id={active === "notice" ? "active" : ""} onClick={clicknotice}><i class="material-symbols-outlined">favorite</i>Thông báo</a>
+                        <a className="itemmenu" id={active === "createpost" ? "active" : ""} onClick={clickncreatepost}><i class="material-symbols-outlined">add_circle</i>Tạo</a>
+                        <a className="itemmenu" id={active === "mypage" ? "active" : ""} href="mypage"><i class="material-symbols-outlined">home</i>Trang cá nhân</a>
                         <div className="more itemmenu"><i class="material-symbols-outlined">menu</i>Xem thêm</div>
                     </div>
                 </div>
@@ -60,13 +60,13 @@ function Header(props) {
                     </div>
                     <div className="menu1">
                         <a className="itemmenu" id={active === "frontpage" ? "active" : ""} href="/"><i class="material-symbols-outlined">home</i></a>
-                        <a className="itemmenu" id={active == "search" ? "active" : ""} onClick={clicksearch} ><i class="material-symbols-outlined">search</i></a>
-                        <a className="itemmenu" id={active == "explore" ? "active" : ""} href=""><i class="material-symbols-outlined">explore</i></a>
-                        <a className="itemmenu" id={active == "reals" ? "active" : ""} href=""><i class="material-symbols-outlined">auto_read_play</i></a>
+                        <a className="itemmenu" id={active === "search" ? "active" : ""} onClick={clicksearch} ><i class="material-symbols-outlined">search</i></a>
+                        <a className="itemmenu" id={active === "explore" ? "active" : ""} href=""><i class="material-symbols-outlined">explore</i></a>
+                        <a className="itemmenu" id={active === "reals" ? "active" : ""} href=""><i class="material-symbols-outlined">auto_read_play</i></a>
                         <a className="itemmenu" id={active === "message" ? "active" : ""} href="message"><i class="material-symbols-outlined">chat</i></a>
-                        <a className="itemmenu" id={active == "notice" ? "active" : ""} onClick={clicknotice}><i class="material-symbols-outlined">favorite</i></a>
-                        <a className="itemmenu" id={active == "createpost" ? "active" : ""} onClick={clickncreatepost}><i class="material-symbols-outlined">add_circle</i></a>
-                        <a className="itemmenu" id={active == "mypage" ? "active" : ""} href="mypage"><i class="material-symbols-outlined">home</i></a>
+                        <a className="itemmenu" id={active === "notice" ? "active" : ""} onClick={clicknotice}><i class="material-symbols-outlined">favorite</i></a>
+                        <a className="itemmenu" id={active === "createpost" ? "active" : ""} onClick={clickncreatepost}><i class="material-symbols-outlined">add_circle</i></a>
+                        <a className="itemmenu" id={active === "mypage" ? "active" : ""} href="mypage"><i class="material-symbols-outlined">home</i></a>
                         <div className="more itemmenu"><i class="material-symbols-outlined">menu</i></div>
                     </div>
                     {active === "search" &&

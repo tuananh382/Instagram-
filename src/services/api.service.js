@@ -15,8 +15,7 @@ export default class ApiService {
         password: user.password,
         fullName: user.fullName,
       });
-      const data = await response.json();
-      return data;
+      return response.data
     }
   
     // ...
